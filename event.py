@@ -1,17 +1,22 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, SubmitField, IntegerField
+from wtforms import StringField, TextAreaField, SubmitField, IntegerField, SelectField, TimeField
 from wtforms.validators import DataRequired
 
 
 class CreateEvent(FlaskForm):
-    kind_of_sport = StringField('Вид спорта', validators=[DataRequired()])
-    type_of_event = StringField('Тип мероприятия', validators=[DataRequired()])
-    count_of_people = IntegerField(validators=[DataRequired()])
+    kind_of_sport = SelectField('Выберите вид спорта', choices=[("бег", "Бег"), ('плавание', 'Плавание'),
+                                                    ('настольный теннис', 'Настольный теннис'), ('шахматы', 'Шахматы'),
+                                                    ('футбол', 'Футбол'), ('оздоровительный', 'Оздоровительный')],
+                                validators=[DataRequired()])
+    type_of_event =  SelectField('Тип мероприятия', choices=[("Соревнование", "Соревнование"), ('Тренировка', 'Тренировка'),
+                                                    ('Любительская игра', 'Любительская игра'), ('Зарядка', 'Зарядка'),
+                                                    ('Пробежка', 'Пробежка')],
+                                validators=[DataRequired()])
+    count_of_people = IntegerField('Количество участников', validators=[DataRequired()])
+    time = TimeField('Время', validators=[DataRequired()])
     date = StringField('Дата', validators=[DataRequired()])
-    time = StringField('Время', validators=[DataRequired()])
     place = StringField('Место', validators=[DataRequired()])
     submit = SubmitField("Создать")
 
-    def __str__(self):
+    def str(self):
         return f'{self.kind_of_sport} {self.type_of_event} {self.count_of_people} {self.date} '
-

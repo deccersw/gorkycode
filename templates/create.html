@@ -63,53 +63,39 @@
 
     <h1>Создание соревнования</h1>
     <form action="" method="post">
+        {{ form.hidden_tag() }}
         <div class="form-container">
-                <div class="form-group">
-                    <label for="sport-type">Вид спорта</label>
-                    <select id="sport-type" name="sport-type" required>
-                        <option value="">Выберите вид спорта</option>
-                        <option value="бег">Бег</option>
-                        <option value="плавание">Плавание</option>
-                        <option value="настольный теннис">Настольный теннис</option>
-                        <option value="шахматы">Шахматы</option>
-                        <option value="футбол">Футбол</option>
-                        <option value="оздоровительный">оздоровительный</option>
-                    </select>
-                </div>
+            <p>
+                {{ form.kind_of_sport.label }}<br>
+                {{ form.kind_of_sport(class="form-control", type="text") }}<br>
+            </p>
 
-                <div class="form-group">
-                    <label for="sport-type">Тип мероприятия</label>
-                    <select id="event-type" name="event-type" required>
-                        <option value="">Выберите тип мероприятия</option>
-                        <option value="Соревнование">Соревнование</option>
-                        <option value="Тренировка">Тренировка</option>
-                        <option value="Любительская игра">Любительская игра</option>
-                        <option value="Зарядка">Зарядка</option>
-                        <option value="Пробежка">Пробежка</option>
-                    </select>
-                </div>
+            <p>
+                {{ form.type_of_event.label }}<br>
+                {{ form.type_of_event(class="form-control", type="text") }}<br>
+            </p>
 
-                <div class="form-group">
-                    <label for="location">Место проведения</label>
-                    <input type="text" id="location" name="location" required>
-                </div>
+            <p>
+                {{ form.count_of_people.label }}<br>
+                {{ form.count_of_people(class="form-control", type="number") }}<br>
+            </p>
 
-                <div class="form-group">
-                    <label for="count">Количество участников</label>
-                    <input type="number" id="count" name="count" required>
-                </div>
+            <p>
+                {{ form.time.label }}<br>
+                {{ form.time(class="form-control", type="text") }}<br>
+            </p>
 
-                <div class="form-group">
-                    <label for="time">Время проведения</label>
-                    <input type="text" id="time" name="time" placeholder="Например: 15:00" required>
-                </div>
+            <p>
+                {{ form.date.label }}<br>
+                {{ form.date(class="form-control", type="text") }}<br>
+            </p>
 
-                <div class="form-group">
-                    <label for="date">Дата проведения</label>
-                    <input type="text" id="date" name="date" placeholder="Например: 01.01.2024" required>
-                </div>
+            <p>
+                {{ form.place.label }}<br>
+                {{ form.place(class="form-control", type="text") }}<br>
+            </p>
 
-                <button type="submit" class="submit-button">Создать соревнование</button>
+            <p>{{ form.submit(type="submit", class="submit-button") }}</p>
         </div>
     </form>
 </body>
