@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание соревнования</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .submit-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Создание соревнования</h1>
+    <form action="" method="post">
+        <div class="form-container">
+                <div class="form-group">
+                    <label for="sport-type">Вид спорта</label>
+                    <select id="sport-type" name="sport-type" required>
+                        <option value="">Выберите вид спорта</option>
+                        <option value="бег">Бег</option>
+                        <option value="плавание">Плавание</option>
+                        <option value="настольный теннис">Настольный теннис</option>
+                        <option value="шахматы">Шахматы</option>
+                        <option value="футбол">Футбол</option>
+                        <option value="оздоровительный">оздоровительный</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sport-type">Тип мероприятия</label>
+                    <select id="event-type" name="event-type" required>
+                        <option value="">Выберите тип мероприятия</option>
+                        <option value="Соревнование">Соревнование</option>
+                        <option value="Тренировка">Тренировка</option>
+                        <option value="Любительская игра">Любительская игра</option>
+                        <option value="Зарядка">Зарядка</option>
+                        <option value="Пробежка">Пробежка</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Место проведения</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="count">Количество участников</label>
+                    <input type="number" id="count" name="count" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Время проведения</label>
+                    <input type="text" id="time" name="time" placeholder="Например: 15:00" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Дата проведения</label>
+                    <input type="text" id="date" name="date" placeholder="Например: 01.01.2024" required>
+                </div>
+
+                <button type="submit" class="submit-button">Создать соревнование</button>
+        </div>
+    </form>
+</body>
+</html>
