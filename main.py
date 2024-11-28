@@ -21,6 +21,7 @@ def base():
 
 @app.route("/create", methods=['GET', 'POST'])
 def create():
+    global id_number
     form = CreateEvent()
     if form.validate_on_submit():
         cur = conn.cursor()
