@@ -8,38 +8,38 @@ conn = psycopg2.connect(database='gorkycode',
             host='127.0.0.1',
             port=5432) # подключились к базе данных
 
-id_number = 0 # id мероприятия в базе данных
+id_number = 1 # id мероприятия в базе данных
 
-cur = conn.cursor()
+# cur = conn.cursor()
 
-cur.execute("select * from information_schema.tables where table_name=%s", ('events',))
-if bool(cur.rowcount) == False:
-        id_number = 1
-        cur.execute(
-            """
-                CREATE TABLE events
-                (
-                    id INTEGER,
-                    sport CHARACTER VARYING(2000),
-                    event_type CHARACTER VARYING(2000),
-                    count_people INTEGER,
-                    date CHARACTER VARYING(2000),
-                    time CHARACTER VARYING(2000),
-                    place CHARACTER VARYING(2000)
-                )
-            """
-        )
+# cur.execute("select * from information_schema.tables where table_name=%s", ('events',))
+# if bool(cur.rowcount) == False:
+#         id_number = 1
+#         cur.execute(
+#             """
+#                 CREATE TABLE events
+#                 (
+#                     id INTEGER,
+#                     sport CHARACTER VARYING(2000),
+#                     event_type CHARACTER VARYING(2000),
+#                     count_people INTEGER,
+#                     date CHARACTER VARYING(2000),
+#                     time CHARACTER VARYING(2000),
+#                     place CHARACTER VARYING(2000)
+#                 )
+#             """
+#         )
 
-else:
-    cur.execute(
-        """
-            SELECT * FROM events
-        """
-    )
-    events = cur.fetchall()[-1]
-    id_number = events[0] + 1
+# else:
+#     cur.execute(
+#         """
+#             SELECT * FROM events
+#         """
+#     )
+#     events = cur.fetchall()[-1]
+#     id_number = events[0] + 1
 
-conn.commit()
+# conn.commit()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'random string'
@@ -84,7 +84,7 @@ def created_events():
     events_len = len(events)
     # print(len(events))
     
-    dict_of_params = {"kindSport": [], "typeEvent": [], "count_people": [], "time": [], "date": [], "place": []}
+    dict_of_params = {"kindSport": [], "typeEvent": [], "count_people": [], "date": [], "time": [], "place": []}
     for event in events:
         index = 1
         for param in dict_of_params.keys():
