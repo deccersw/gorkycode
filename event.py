@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField, SubmitField, IntegerField, SelectField, TimeField
+from wtforms import StringField, DateField, SubmitField, IntegerField, SelectField, TimeField
 from wtforms.validators import DataRequired
+from datetime import datetime
 
 
 class CreateEvent(FlaskForm):
@@ -14,7 +15,7 @@ class CreateEvent(FlaskForm):
                                 validators=[DataRequired()])
     count_of_people = IntegerField('Количество участников', validators=[DataRequired()])
     time = TimeField('Время', validators=[DataRequired()])
-    date = StringField('Дата', validators=[DataRequired()])
+    date = DateField('Дата', validators=[DataRequired()], default=datetime.today(), format='%Y-%m-%d')
     place = StringField('Место', validators=[DataRequired()])
     submit = SubmitField("Создать")
 
