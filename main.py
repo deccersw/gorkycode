@@ -8,12 +8,13 @@ conn = psycopg2.connect(database='gorkycode',
             host='127.0.0.1',
             port=5432) # подключились к базе данных
 
-id_number = 1 # id мероприятия в базе данных
+id_number = 0 # id мероприятия в базе данных
 
 cur = conn.cursor()
 
 cur.execute("select * from information_schema.tables where table_name=%s", ('events',))
 if bool(cur.rowcount) == False:
+        id_number = 1
         cur.execute(
             """
                 CREATE TABLE events
@@ -28,6 +29,16 @@ if bool(cur.rowcount) == False:
                 )
             """
         )
+
+else:
+    cur.execute(
+        """
+            SELECT * FROM events
+        """
+    )
+    events = cur.fetchall()[-1]
+    id_number = events[0] + 1
+
 conn.commit()
 
 app = Flask(__name__)
