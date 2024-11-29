@@ -71,6 +71,28 @@ def create():
 
     return render_template('create.html', form=form)
 
+@app.route("/created_events")
+def created_events():
+    cur = conn.cursor()
+    cur.execute(
+        """
+            SELECT * FROM events
+        """
+    )
+    events = cur.fetchall()
+
+    events_len = len(events)
+    # print(len(events))
+    
+    dict_of_params = {"kindSport": [], "typeEvent": [], "count_people": [], "time": [], "date": [], "place": []}
+    for event in events:
+        index = 1
+        for param in dict_of_params.keys():
+            dict_of_params[param].append(event[index])
+            index += 1
+    
+    return render_template("created_events.html", dict=dict_of_params, len=events_len)
+
 
 if __name__ == "__main__":
     app.run()

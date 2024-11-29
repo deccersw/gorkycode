@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список мероприятий</title>
-    <link rel="stylesheet" href="events_style.css">
+    <link rel="stylesheet" href="/static/events_style.css">
 </head>
 <body>
 
@@ -12,28 +12,19 @@
         <h1>Список созданных мероприятий</h1>
 
         <div class="event-list">
-            <div class="event-item">
-                <h2>Футбол</h2>
-                <p><strong>Количество участников:</strong> 10</p>
-                <p><strong>Дата проведения:</strong> 2023-10-15</p>
-                <p><strong>Место проведения:</strong> Стадион "Зенит"</p>
-            </div>
 
-            <div class="event-item">
-                <h2>Баскетбол</h2>
-                <p><strong>Количество участников:</strong> 8</p>
-                <p><strong>Дата проведения:</strong> 2023-10-20</p>
-                <p><strong>Место проведения:</strong> Спортзал "Олимп"</p>
-            </div>
+            {% for i in range(len) %}
+                <div class="event-item">
+                    <h2>{{dict["kindSport"][i]}}</h2>
+                    <p><strong>Тип соревнования:</strong> {{dict["typeEvent"][i]}} </p>
+                    <p><strong>Количество участников:</strong> {{dict["count_people"][i]}} </p>
+                    <p><strong>Дата проведения:</strong> {{dict["date"][i]}}  </p>
+                    <p><strong>Время проведения:</strong> {{dict["time"][i]}} </p>
+                    <p><strong>Место проведения:</strong> {{dict["place"][i]}} </p>
+                </div>
 
-            <div class="event-item">
-                <h2>Волейбол</h2>
-                <p><strong>Количество участников:</strong> 12</p>
-                <p><strong>Дата проведения:</strong> 2023-10-25</p>
-                <p><strong>Место проведения:</strong> Пляж "Солнечный"</p>
-            </div>
+            {% endfor %}
 
-            <!-- Добавьте больше мероприятий по мере необходимости -->
         </div>
 
     </div>
