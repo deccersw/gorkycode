@@ -70,30 +70,27 @@
                 {{ form.kind_of_sport(class="form-control", type="text") }}<br>
             </p>
 
-            <p>
-                {{ form.type_of_event.label }}<br>
-                {{ form.type_of_event(class="form-control", type="text") }}<br>
-            </p>
+  
+
 
             <p>
-                {{ form.count_of_people.label }}<br>
-                {{ form.count_of_people(class="form-control", type="number") }}<br>
-            </p>
-
-            <p>
-                {{ form.date.label }}
-                {{ form.date(class="form-control", type="date") }}
-            </p>
-
-            <p>
-
-                {{ form.time.label }}
-                {{ form.time }}
+                {{ form.district.label }}<br>
+                {{ form.district(class="form-control", type="text") }}<br>
             </p>
 
             <p>
                 {{ form.place.label }}<br>
                 {{ form.place(class="form-control", type="text") }}<br>
+            </p>
+
+            <p>
+                {{ form.date.label }}
+                {{ form.date(class="form-control", type="text") }}
+            </p>
+
+            <p>
+                {{ form.time.label }}
+                {{ form.time(class="form-control", type="text") }}
             </p>
 
             <p>{{ form.submit(type="submit", class="submit-button") }}</p>

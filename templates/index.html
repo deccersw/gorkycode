@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700" />
+
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+
+    <meta name="x-apple-disable-message-reformatting" />
+
+    <style>
+
+      .sports-events-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        min-width: 120rem;
+        background: white;
+      }
+      .event-card-container1 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .event-card-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 110rem;
+        padding-top: 2.5rem;
+        padding-bottom: 0.4375rem;
+      }
+      .event-card-container2 {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 10.11%;
+      }
+      .image-container {
+        box-sizing: border-box;
+        display: block;
+        width: 7.125rem;
+        max-width: initial;
+        height: 5.75rem;
+        border: none;
+        object-fit: cover;
+      }
+      .event-menu-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 1.90625rem;
+        align-items: center;
+        justify-content: flex-start;
+        width: 77.1%;
+        height: 5.75rem;
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem;
+      }
+      .event-card-title {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 400 1.375rem/1.5rem Roboto, sans-serif;
+        color: #006fbe;
+      }
+      .profile-button-container {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 12.78%;
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem;
+      }
+      .author-button-style {
+        box-sizing: border-box;
+        display: block;
+        width: 13.125rem;
+        min-width: 13.125rem;
+        height: 3.75rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: #fefefe;
+        cursor: pointer;
+        background: #2ac09b;
+        border: none;
+        border-radius: 1rem;
+      }
+      .sports-event-creator {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+      }
+      .sport-events-section {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 26.25rem;
+        padding-right: 15.1875rem;
+        padding-bottom: 4.875rem;
+        background: url("static/assets/image_b341ea42.jpeg") 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .sport-event-heading {
+        box-sizing: border-box;
+        flex: 0 1 auto;
+        max-width: 69.4375rem;
+        padding: 0;
+        margin: 0;
+        font: 700 5.75rem/6.25rem Montserrat, sans-serif;
+        color: #fefefe;
+        text-align: left;
+      }
+      .event-creation-button {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-right: 6.75rem;
+        padding-left: 6.75rem;
+        margin-left: -0.0625rem;
+        background: white;
+        border: 2px solid #2ac09b;
+        border-radius: 1.5rem;
+      }
+      .vertical-centered-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+      }
+      .green-header-text-style {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 700 3.5rem/3.75rem Montserrat, sans-serif;
+        color: #2ac09b;
+      }
+      .sport-event-section {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 3.75rem;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 4.875rem 2.25rem 5.5625rem 2.4375rem;
+      }
+      .event-types-container {
+        flex: 0 0 auto;
+        padding-right: 0.1875rem;
+        padding-left: 0.1875rem;
+      }
+      .event-type-heading {
+        padding: 0;
+        padding-right: 0.6875rem;
+        padding-left: 0.6875rem;
+        margin: 0;
+        font: 700 3.5rem/3.75rem Montserrat, sans-serif;
+        color: #006fbe;
+      }
+      .event-card-container3 {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        gap: 1.8125rem;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 4.6875rem;
+      }
+      .sport-card {
+        box-sizing: border-box;
+        display: block;
+        width: 7.375rem;
+        max-width: initial;
+        height: 7.1875rem;
+      }
+      .sport-message-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 1 22.8125rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        max-width: 22.8125rem;
+        padding: 1.0625rem 1.0625rem 1.6875rem 1rem;
+        background: url("static/assets/image_91de4af3.jpeg") 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1.5rem;
+      }
+      .football-card {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        height: 2.875rem;
+        padding-right: 7rem;
+        padding-left: 7rem;
+        border: 2px solid white;
+        border-radius: 1.5rem;
+      }
+      .football-heading {
+        padding-left: 10rem;
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: white;
+      }
+      .championship-text-style {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        margin-top: 22.6875rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: white;
+        text-align: left;
+      }
+      .sports-info-panel {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 1 22.8125rem;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        max-width: 22.8125rem;
+        padding: 1.0625rem 1.0625rem 1.4375rem 0.875rem;
+        background: url("static/assets/image_491bcddf.jpeg") 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1.5rem;
+      }
+      .tennis-button-style {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 100%;
+        height: 2.875rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: white;
+        cursor: pointer;
+        padding-left: 0rem;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 1.5rem;
+      }
+      .basketball-button-style {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 100%;
+        height: 2.875rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: white;
+        font-color: white;
+        cursor: pointer;
+        padding-left: -9rem;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 1.5rem;
+      }
+      .unity-message {
+        flex: 0 0 auto;
+        align-self: stretch;
+        padding: 0;
+        margin: 0;
+        margin-top: 22.6875rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: white;
+        text-align: left;
+      }
+      .sport-quote-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 1 22.8125rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        max-width: 22.8125rem;
+        padding: 1.0625rem 1.0625rem 1.4375rem 0.875rem;
+        background: url("static/assets/image_96fe219f.jpeg") 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1.5rem;
+      }
+      .open-space-cta-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        border: 2px solid white;
+        border-radius: 1.5rem;
+      }
+      .sport-life-container {
+        font-color: white;
+        flex: 0 0 auto;
+      }
+      .swimming-button {
+        box-sizing: border-box;
+        width: 100%;
+        height: 2.875rem;
+        padding-left: 0rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: white;
+        font-color: white;
+        cursor: pointer;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 1.5rem;
+        display: block;
+        flex: 0 0 auto;
+      }
+      .input-with-border-radius1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 2.875rem;
+        padding-left: 2.25rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        border: 2px solid white;
+        border-radius: 1.5rem;
+      }
+      .input-style-f62::placeholder {
+        color: white;
+      }
+      .sport-quote-container1 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 22.8125rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 1.0625rem 1.0625rem 2.25rem 1.5625rem;
+        background: url("static/assets/image_72692b1.jpeg") 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1.5rem;
+      }
+      .input-with-border-radius {
+        box-sizing: border-box;
+        width: 100%;
+        height: 2.875rem;
+        padding-left: 1.625rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        border: 2px solid white;
+        border-radius: 1.5rem;
+      }
+      .sport-life-heading {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        margin-top: 23.625rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: white;
+      }
+      .testimonial-container2 {
+        flex: 0 0 auto;
+        padding-right: 0.875rem;
+        padding-left: 0.875rem;
+      }
+      .testimonial-heading {
+        padding: 0;
+        margin: 0;
+        font: 700 3.5rem/3.75rem Montserrat, sans-serif;
+        color: #006fbe;
+      }
+      .testimonial-card {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding-right: 7.5625rem;
+        margin-top: 3.875rem;
+      }
+      .testimonial-image {
+        box-sizing: border-box;
+        display: block;
+        width: 31.25rem;
+        max-width: initial;
+        height: 31.25rem;
+        border: none;
+        border-radius: 1.5rem;
+        object-fit: cover;
+      }
+      .testimonial-container {
+        box-sizing: border-box;
+        flex: 0 1 auto;
+        max-width: 65.4375rem;
+        padding-top: 0.4375rem;
+        margin-left: 2.9375rem;
+      }
+      .testimonial-container1 {
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .hero-text {
+        padding: 0;
+        margin: 0;
+        font: 700 5.75rem/6.25rem Montserrat, sans-serif;
+        color: black;
+      }
+      .sporty-quote-text-style {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: -1.6875rem;
+        font: 700 3.5rem/3.75rem Montserrat, sans-serif;
+        color: black;
+        text-align: left;
+      }
+      .testimonial-author-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 2.125rem;
+      }
+      .marathon-organizer-text-style1 {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 400 1.125rem Roboto, sans-serif;
+        color: #006fbe;
+      }
+      .marathon-organizer-label {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        margin-left: 1.3125rem;
+        font: 400 1.125rem Roboto, sans-serif;
+        color: black;
+      }
+      .marathon-organizer-text-style {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        margin-left: 0.140625rem;
+        font: 400 1.125rem Roboto, sans-serif;
+        color: #757575;
+      }
+      .dream-event-creator {
+        flex: 0 0 auto;
+        margin-top: 0.6875rem;
+      }
+      .dream-event-creation-section {
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: 0.875rem;
+        padding-left: 0.875rem;
+      }
+      .dream-event-text {
+        padding: 0;
+        margin: 0;
+        margin-top: 1.46875rem;
+        font: 400 1.625rem/1.875rem Roboto, sans-serif;
+        color: rgba(0, 111, 190, 0.87);
+      }
+      .event-creation-form-layout {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2.25rem;
+      }
+      .event-creation-form-container {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        min-width: 32.3125rem;
+      }
+      .sport-type-container1 {
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+      }
+      .sport-type-heading {
+        padding: 0;
+        padding-right: 0.3125rem;
+        padding-left: 0.3125rem;
+        margin: 0;
+        font: 400 1.625rem/1.875rem Roboto, sans-serif;
+        color: black;
+      }
+      .sport-type-container {
+        box-sizing: border-box;
+        width: 9.25rem;
+        height: 1rem;
+        margin-top: -1.25rem;
+        background: white;
+      }
+      .fullwidth-container1 {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 0.2rem;
+      }
+      .input-container {
+        box-sizing: border-box;
+        width: 100%;
+        height: 4rem;
+        padding-left: 1.0625rem;
+        font: 400 1.25rem Roboto, sans-serif;
+        background: #fefefe;
+        border: 1px solid #757575;
+        border-radius: 1.5rem;
+      }
+      .event-type-selector2 {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 1.375rem;
+      }
+      .event-type-container {
+        box-sizing: border-box;
+        width: 14rem;
+        height: 1rem;
+        margin-top: -0.6rem;
+        background: white;
+      }
+      .event-type-selector1 {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 100%;
+        height: 4rem;
+        padding-right: 1.0625rem;
+        padding-left: 1.0625rem;
+        margin-top: -0.625rem;
+        background: #fefefe;
+        border: 1px solid #757575;
+        border-radius: 1.5rem;
+      }
+      .event-type-selector {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 400 1.25rem Roboto, sans-serif;
+        color: rgba(196, 196, 196, 0.6);
+      }
+      .event-details-container {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 0rem;
+      }
+      .neighborhood-label {
+        box-sizing: border-box;
+        width: 5.5rem;
+        height: 1rem;
+        margin-top: -0.6rem;
+        background: white;
+      }
+      .fullwidth-container {
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: 0.25rem;
+        margin-top: -0.625rem;
+      }
+      .input-container1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 4rem;
+        padding-left: 0.8125rem;
+        font: 400 1.25rem Roboto, sans-serif;
+        background: #fefefe;
+        border: 1px solid #757575;
+        border-radius: 1.5rem;
+      }
+      .platform-title-container {
+        box-sizing: border-box;
+        width: 8.8125rem;
+        height: 1rem;
+        margin-top: -0.5rem;
+        background: white;
+      }
+      .date-container {
+        box-sizing: border-box;
+        width: 4.375rem;
+        height: 1rem;
+        margin-top: -1.25rem;
+        background: white;
+      }
+      .time-indicator {
+        box-sizing: border-box;
+        width: 5.25rem;
+        height: 1rem;
+        margin-top: -1.25rem;
+        background: white;
+      }
+      .description-container {
+        box-sizing: border-box;
+        width: 100%;
+        margin-top: 2.5625rem;
+      }
+      .content-wrapper1 {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+      }
+      .description-heading {
+        box-sizing: border-box;
+        padding: 0;
+        padding-right: 0.3125rem;
+        padding-bottom: 0.71875rem;
+        padding-left: 0.3125rem;
+        margin: 0;
+        font: 400 1.625rem/1.875rem Roboto, sans-serif;
+        color: black;
+        background: white;
+      }
+      .description-container1 {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 100%;
+        height: 7.6875rem;
+        padding-right: 1.0625rem;
+        padding-left: 1.0625rem;
+        margin-top: -0.71875rem;
+        background: #fefefe;
+        border: 1px solid #757575;
+        border-radius: 1.5rem;
+      }
+      .event-creation-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-right: 1.125rem;
+        margin-top: 2.3125rem;
+        background: #006fbe;
+        border: 1px solid #757575;
+        border-radius: 1.5rem;
+      }
+      .event-creation-button-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        height: 4rem;
+      }
+      .event-creation-title {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        font: 400 2rem/2.25rem Roboto, sans-serif;
+        color: white;
+      }
+      .event-image-display-style {
+        box-sizing: border-box;
+        display: block;
+        width: 75.5rem;
+        max-width: initial;
+        height: 51rem;
+        border: none;
+        border-radius: 1.5rem;
+        object-fit: cover;
+      }
+      .sport-info-panel {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 2.6875rem 3.6875rem 1.75rem;
+        border: 2px solid #2ac09b;
+      }
+      .sports-info-container2 {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 66%;
+      }
+      .sports-info-container1 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .sports-info-container {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 24.75rem;
+        padding: 1.25rem 1.1875rem;
+        background: #2ac09b;
+        border-radius: 1.5rem;
+      }
+      .prominent-text-block {
+        padding: 0;
+        margin: 0;
+        font: 400 2rem/2.25rem Roboto, sans-serif;
+        color: #f6f6f6;
+        text-align: left;
+      }
+      .sports-legends-info {
+        padding: 0;
+        margin: 0;
+        margin-top: 1.125rem;
+        font: 400 1.25rem/1.5rem Roboto, sans-serif;
+        color: #f6f6f6;
+        text-align: left;
+      }
+      .primary-button-style {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        min-width: 22.25rem;
+        height: 3.875rem;
+        margin-top: 1.25rem;
+        font: 700 1.5rem/1.75rem Roboto, sans-serif;
+        color: #f6f6f6;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #f6f6f6;
+        border-radius: 0.75rem;
+      }
+      .feedback-container {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 24.75rem;
+        padding: 1.25rem 1.1875rem;
+        margin-left: 1.5rem;
+        background: #006fbe;
+        border-radius: 1.5rem;
+      }
+      .feedback-title {
+        padding: 0;
+        margin: 0;
+        font: 400 2rem/2.25rem Roboto, sans-serif;
+        color: #f6f6f6;
+      }
+      .feedback-message-text-style {
+        padding: 0;
+        margin: 0;
+        margin-top: 3.375rem;
+        font: 400 1.25rem/1.5rem Roboto, sans-serif;
+        color: #f6f6f6;
+        text-align: left;
+      }
+      .footer-copyright-text-style {
+        padding: 0;
+        margin: 0;
+        margin-top: 6.25rem;
+        font: 400 1.25rem Roboto, sans-serif;
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .city-info-section {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 34%;
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem;
+      }
+      .hierarchical-flex-container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        padding-right: 1.59375rem;
+      }
+      .admin-card {
+        padding-right: 0.6875rem;
+        padding-left: 0.6875rem;
+      }
+      .image-container2 {
+        box-sizing: border-box;
+        display: block;
+        width: 4.125rem;
+        max-width: initial;
+        height: 5.375rem;
+      }
+      .city-info-snippet {
+        padding: 0;
+        margin: 0;
+        margin-top: 1rem;
+        font: 400 1.125rem/1.375rem Roboto, sans-serif;
+        color: #131313;
+        text-align: left;
+      }
+      .city-analytics-image {
+        box-sizing: border-box;
+        display: block;
+        width: 5.375rem;
+        max-width: initial;
+        height: 5.375rem;
+      }
+      .city-organization-section {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 3.5rem;
+      }
+      .sports-center-image {
+        box-sizing: border-box;
+        display: block;
+        width: 5.375rem;
+        max-width: initial;
+        height: 5.375rem;
+        border: none;
+        object-fit: cover;
+      }
+      .university-card {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        max-width: 18.125rem;
+      }
+      .content-wrapper {
+        padding-right: 0.5625rem;
+        padding-left: 0.5625rem;
+      }
+      .image-container1 {
+        box-sizing: border-box;
+        display: block;
+        width: 4.375rem;
+        max-width: initial;
+        height: 4.75rem;
+      }
+      .university-name-text-style {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-top: 1rem;
+        font: 400 1.125rem/1.375rem Roboto, sans-serif;
+        color: #131313;
+        text-align: left;
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div style="display: inline-block; width: 1920px" data-ignore="used only for top most containter width">
+      <div class="sports-events-container">
+        <div class="event-card-container1">
+          <div class="event-card-container">
+            <div class="event-card-container2">
+              <img src="static/assets/image_a451a2a2.png" class="image-container" />
+            </div>
+            <div class="event-menu-container">
+              <p class="event-card-title">Карта мероприятий</p>
+              <p class="event-card-title">Стать тренером</p>
+              <p class="event-card-title">Календарь</p>
+              <p class="event-card-title">Создать мероприятие</p>
+            </div>
+            <div class="profile-button-container">
+              <!-- Button Component is detected here -->
+              <button class="author-button-style">Иванов А. И.</button>
+            </div>
+          </div>
+        </div>
+        <div class="sports-event-creator">
+          <div class="sport-events-section">
+            <p class="sport-event-heading">Cоздавай свои спортивные мероприятия</p>
+            <div class="event-creation-button">
+              <div class="vertical-centered-text-container">
+              </div>
+            </div>
+          </div>
+          <div class="sport-event-section">
+            <div class="event-types-container">
+              <p class="event-type-heading">Типы мероприятий</p>
+              <div class="event-card-container3">
+                <img src="static/assets/image_be7c556d.png" class="sport-card" />
+                <div class="sport-message-container">
+                  <div class="football-card">
+                    <p class="football-heading">Футбол</p>
+                  </div>
+                  <p class="championship-text-style">Устраивайте дворовые чемпионаты</p>
+                </div>
+                <div class="sports-info-panel">
+                  <!-- Button Component is detected here -->
+                  <button class="tennis-button-style">Теннис</button>
+                  <p class="unity-message">Не бойтесь искать единомышленников</p>
+                </div>
+                <div class="sport-quote-container">
+                  <div class="open-space-cta-container">
+                    <div class="sport-life-container">
+                      <!-- Input Component is detected here -->
+                      <button class="swimming-button">Плавание</button>
+                    </div>
+                  </div>
+                  <p class="championship-text-style">Занимайтесь на открытых площадках</p>
+                </div>
+                <div class="sport-quote-container1">
+                  <div class="sport-life-container">
+                    <!-- Input Component is detected here -->
+                    <button class="basketball-button-style">Баскетбол</button>
+                  </div>
+                  <p class="sport-life-heading">Спорт - это жизнь</p>
+                </div>
+                <img src="static/assets/image_cd34fbd9.png" class="sport-card" />
+              </div>
+            </div>
+            <div class="testimonial-container2">
+              <p class="testimonial-heading">Отзывы о прошедших мероприятиях</p>
+              <div class="testimonial-card">
+                <img src="static/assets/image_4684a46.jpeg" class="testimonial-image" />
+                <div class="testimonial-container">
+                  <div class="testimonial-container1">
+                    <p class="hero-text">“</p>
+                    <p class="sporty-quote-text-style">Я не ожидал, что смогу найти столько единомышленников. Это лучший спортивный сервис!</p>
+                  </div>
+                  <div class="testimonial-author-info">
+                    <p class="marathon-organizer-text-style1">Борис Улитин</p>
+                    <p class="marathon-organizer-label">|</p>
+                    <p class="marathon-organizer-text-style">&nbsp;&nbsp;&nbsp; организатор бегового марафона</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dream-event-creator">
+              <div class="dream-event-creation-section">
+                <p class="testimonial-heading">Осталось только начать</p>
+                <p class="dream-event-text">Давайте вместе создадим ваше событие мечты</p>
+              </div>
+              <div class="event-creation-form-layout">
+                <div class="event-creation-form-container">
+                  <div class="testimonial-container1">
+                    <div class="testimonial-container1">
+                      <div class="testimonial-container1">
+                        <div class="sport-type-container1">
+                        <form action="" method="post">
+                            {{ form.hidden_tag() }}
+                          <p class="sport-type-heading">Вид спорта</p>
+                          <div class="sport-type-container"></div>
+                        </div>
+                        <div class="fullwidth-container1">
+                          <!-- Input Component is detected here -->
+                        
+                            <div>
+                            {{ form.kind_of_sport(class="input-container input-style-f62::placeholder") }}</div>
+                        
+                        </div>
+                      </div>
+                      <div class="event-type-selector2">
+                        <div class="sport-type-container1">
+                          <p class="sport-type-heading">Тип мероприятия</p>
+                          <div class="event-type-container"></div>
+                        </div>
+                        <div class="fullwidth-container">
+                          <!-- Input Component is detected here -->
+                          <br>{{ form.type_of_event(class="input-container1 input-style-f62::placeholder", type="text") }}<br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="event-details-container">
+                      <div class="event-type-selector2">
+                        <div class="sport-type-container1">
+                          <p class="sport-type-heading">Количество людей</p>
+                          <div class="platform-title-container"></div>
+                        </div>
+                        <div class="fullwidth-container">
+                          <!-- Input Component is detected here -->
+                          <br>{{ form.count_of_people(class="input-container1 input-style-f62::placeholder", placeholder="Напишите количество участников", type="text") }}<br>
+                        </div>
+                      </div>
+                      <div class="testimonial-container1">
+                        <div class="sport-type-container1">
+                          <p class="sport-type-heading">Район</p>
+                          <div class="neighborhood-label"></div>
+                        </div>
+                        <div class="fullwidth-container">
+                          <!-- Input Component is detected here -->
+                          <p>
+                            <br>{{ form.district(class="input-container1 input-style-f62::placeholder", type="text") }}<br>
+                        </p>
+                        </div>
+                      </div>
+                      <div class="event-type-selector2">
+                        <div class="sport-type-container1">
+                          <p class="sport-type-heading">Площадка</p>
+                          <div class="platform-title-container"></div>
+                        </div>
+                        <div class="fullwidth-container">
+                          <!-- Input Component is detected here -->
+                          <br>{{ form.place(class="input-container1 input-style-f62::placeholder", type="text") }}<br>
+                        </div>
+                      </div>
+                      <div class="event-type-selector2">
+                        <div class="sport-type-container1">
+                          <p class="sport-type-heading">Дата</p>
+                          <div class="date-container"></div>
+                        </div>
+                        <div class="fullwidth-container1">
+                          <!-- Input Component is detected here -->
+                          <br>{{ form.date(class="input-container input-style-f62::placeholder", placeholder="дд:мм:гггг", type="text") }}<br>
+                        </div>
+                      </div>
+                      <div class="event-type-selector2">
+                        <div class="sport-type-container1">
+                          <p class="sport-type-heading">Время</p>
+                          <div class="time-indicator"></div>
+                        </div>
+                        <div class="fullwidth-container1">
+                          <!-- Input Component is detected here -->
+                          <br>{{ form.time(class="input-container input-style-f62::placeholder", placeholder="чч:мм", type="text") }}<br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vent-type-selector2">
+                        <div class="sport-type-container1">
+                          <p class="sport-type-heading">Описание</p>
+                          <div class="time-indicator"></div>
+                        </div>
+                        <div class="fullwidth-container1">
+                          <!-- Input Component is detected here -->
+                          <br>{{ form.description(class="input-container input-style-f62::placeholder", placeholder="Опишите событие", type="text") }}<br>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="event-creation-container">
+                    <div class="event-creation-button-container">
+                        {{ form.submit(class="event-creation-title", type="submit") }}
+                        <a data-v-676f44d4="" href="/" class="event-creation-title" type="submit">
+                    </div>
+                  </div>
+                </div>
+                </form>
+                <img src="static/assets/image_2a38a62a.jpeg" class="event-image-display-style" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sport-info-panel">
+          <div class="sports-info-container2">
+            <div class="sports-info-container1">
+              <div class="sports-info-container">
+                <div class="testimonial-container1">
+                  <p class="prominent-text-block">Ветераны спорта<br />Нижнего Новгорода</p>
+                  <p class="sports-legends-info">Узнайте о выдающихся спортсменах<br />Нижнего Новгорода.</p>
+                </div>
+                <!-- Button Component is detected here -->
+                <button class="primary-button-style">Перейти на сайт</button>
+              </div>
+              <div class="feedback-container">
+                <div class="testimonial-container1">
+                  <p class="feedback-title">Обратная связь</p>
+                  <p class="feedback-message-text-style">Сканируйте QR-код и оставляйте<br />эмоджи и отзыв.</p>
+                </div>
+                <!-- Button Component is detected here -->
+                <button class="primary-button-style">Перейти на сайт</button>
+              </div>
+            </div>
+            <p class="footer-copyright-text-style">Спорт в каждый двор © 2023</p>
+          </div>
+          <div class="city-info-section">
+            <div class="hierarchical-flex-container">
+              <div class="sport-life-container">
+                <div class="admin-card">
+                  <img src="static/assets/image_2adabe45.png" class="image-container2" />
+                </div>
+                <p class="city-info-snippet">Администрация города<br />Нижнего Новгорода</p>
+              </div>
+              <div class="sport-life-container">
+                <img src="static/assets/image_e3c1bfb8.png" class="city-analytics-image" />
+                <p class="city-info-snippet">Аналитический центр города<br />Нижнего Новгорода</p>
+              </div>
+            </div>
+            <div class="city-organization-section">
+              <div class="sport-life-container">
+                <img src="static/assets/image_61510e31.png" class="sports-center-image" />
+                <p class="city-info-snippet">МАУ МЦ Спортивных<br />объектов и ГТО</p>
+              </div>
+              <div class="university-card">
+                <div class="content-wrapper">
+                  <img src="static/assets/image_76fa91b7.png" class="image-container1" />
+                </div>
+                <p class="university-name-text-style">Нижегородский государственный<br />университет им. Н.И.<br />Лобачевского</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
