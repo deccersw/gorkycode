@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список мероприятий</title>
+    <link rel="stylesheet" href="/static/events_style.css">
+</head>
+<body>
+
+    <div class="container_mero">
+        <h1>Календарь</h1>
+
+        <div class="event-list">
+
+            {% for i in range(len) %}
+                <div class="event-item">
+                    <h2>{{dict["kindSport"][i]}}</h2>
+                    <p><strong>Тип мероприятия:</strong> {{dict["typeEvent"][i]}} </p>
+                    <p><strong>Количество участников:</strong> {{dict["count_people"][i]}} </p>
+                    <p><strong>Район:</strong> {{dict["district"][i]}}  </p>
+                    <p><strong>Площадка:</strong> {{dict["place"][i]}}  </p>
+                    <p><strong>Дата проведения:</strong> {{dict["date"][i]}}  </p>
+                    <p><strong>Время проведения:</strong> {{dict["time"][i]}} </p>
+                    <p><strong>Описание:</strong> {{dict["description"][i]}} </p>
+                    <button id="id1" class="bg-[#85e4cc] [font-family:Roboto,sans-serif] text-[32px] font-normal text-[#fefefe] cursor-pointer min-w-[485px] h-[70px] block box-border grow-0 shrink-0 basis-auto mt-[59px] rounded-2xl border-[none]" href="">Записаться </button>
+                    <script>
+                        const btn = document.getElementById("id1");
+                        btn.addEventListener("click", ()=>{
+                            alert("Вы успешно зарегистрировались на мероприятие!");   // отображаем всплывающее окно при нажати на кнопку
+                        });
+                    </script>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+</html>
